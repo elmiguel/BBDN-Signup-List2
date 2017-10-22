@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { GroupService } from './group.service';
+import { ApplicationState } from '../../app-reducer';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'bb-group',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GroupComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private groupService: GroupService,
+    private store: Store<ApplicationState>) { }
 
   ngOnInit() {
   }

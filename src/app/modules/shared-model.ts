@@ -5,10 +5,10 @@ export interface Locale {
 }
 
 export interface Enrollment {
-  type?:  EnrollmentTypes;
-  start?:  string;
-  end?:  string;
-  accessCode?:  string;
+  type?: EnrollmentTypes;
+  start?: string;
+  end?: string;
+  accessCode?: string;
 }
 
 export const enum EnrollmentTypes {
@@ -18,13 +18,13 @@ export const enum EnrollmentTypes {
 }
 
 export interface Availability {
-  available?:  AvailabilityTypes;
-  duration?:  Duration;
+  available?: AvailabilityTypes;
+  duration?: Duration;
 }
 export const enum AvailabilityTypes {
   Yes = 'Yes',
   No = 'No',
-  Disbaled = 'Disabled',
+  Disabled = 'Disabled',
   Term = 'Term'
 }
 
@@ -37,7 +37,7 @@ export interface Duration {
 
 
 export enum DurationTypes {
-  Continuous = 'Continous',
+  Continuous = 'Continuous',
   DateRange = 'DateRange',
   FixedNumDays = 'FixedNumDays',
   Term = 'Term'

@@ -4,13 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CourseModule } from './modules/course/course.module';
-import { UserModule } from './modules/user/user.module';
-import { ListModule } from './modules/list/list.module';
-import { GroupModule } from './modules/group/group.module';
 import { AppService } from './app.service';
-import { StoreModule } from '@ngrx/store';
-import { APP_REDUCER } from './app-reducer';
+import { Store, StoreModule } from '@ngrx/store';
+import { APP_REDUCER, ApplicationState, INITIAL_APP_STATE } from './app-reducer';
+import { SignUpListModule } from './modules/signup-list.module';
 
 @NgModule({
   declarations: [
@@ -20,11 +17,8 @@ import { APP_REDUCER } from './app-reducer';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CourseModule,
-    GroupModule,
-    ListModule,
-    UserModule,
-    StoreModule.forRoot(APP_REDUCER, { initalState: ApplicationState })
+    SignUpListModule.forRoot(),
+    StoreModule.forRoot(APP_REDUCER, { initialState: INITIAL_APP_STATE } )
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

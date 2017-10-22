@@ -8,6 +8,7 @@ import { GroupService } from './group.service';
     CommonModule
   ],
   declarations: [GroupComponent],
+  exports: [GroupComponent],
   providers: [GroupService]
 })
 export class GroupModule { }

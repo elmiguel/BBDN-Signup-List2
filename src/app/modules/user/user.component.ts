@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './user.service';
+import { ApplicationState } from '../../app-reducer';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'bb-user',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userService: UserService,
+    private store: Store<ApplicationState>) { }
 
   ngOnInit() {
   }

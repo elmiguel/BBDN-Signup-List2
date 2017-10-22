@@ -1,8 +1,8 @@
-import { Availability, Locale } from '../shared-model';
+import { Availability, Locale, AvailabilityTypes } from '../shared-model';
 
-export interface User {
-  id: string;
-  uuid: string;
+export interface UserState {
+  id?: string;
+  uuid?: string;
   externalId?: string;
   dataSourceId?: string;
   userName?: string;
@@ -55,3 +55,21 @@ export interface Name {
   title?: string;
 }
 
+export const INITIAL_USER_STATE: UserState = {
+  externalId: '',
+  dataSourceId: '',
+  userName: '',
+  studentId: '',
+  educationLevel: '',
+  gender: '',
+  birthDate: '',
+  created: '',
+  lastLogin: '',
+  systemRoleIds: ['None'],
+  availability: { available: AvailabilityTypes.Yes },
+  name: {},
+  job: {},
+  contact: {},
+  address: {},
+  locale: {},
+};

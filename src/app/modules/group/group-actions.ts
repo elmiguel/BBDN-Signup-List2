@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Group } from './group-model';
+import { GroupState } from './group-model';
 
 export enum GroupActionTypes {
   ADD_GROUP = '[Group] Add Group',
@@ -25,110 +25,110 @@ export enum GroupActionTypes {
 export class AddGroupAction implements Action {
   readonly type = GroupActionTypes.ADD_GROUP;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class AddGroupSuccessAction implements Action {
   readonly type = GroupActionTypes.ADD_GROUP_SUCCESS;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class AddGroupFailureAction implements Action {
   readonly type = GroupActionTypes.ADD_GROUP_FAILURE;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class LoadGroupAction implements Action {
   readonly type = GroupActionTypes.LOAD_GROUP;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class LoadGroupSuccessAction implements Action {
   readonly type = GroupActionTypes.LOAD_GROUP_SUCCESS;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class LoadGroupFailureAction implements Action {
   readonly type = GroupActionTypes.LOAD_GROUP_FAILURE;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class RemoveGroupAction implements Action {
   readonly type = GroupActionTypes.REMOVE_GROUP;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class RemoveGroupSuccessAction implements Action {
   readonly type = GroupActionTypes.REMOVE_GROUP_SUCCESS;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class RemoveGroupFailureAction implements Action {
   readonly type = GroupActionTypes.REMOVE_GROUP_FAILURE;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class AddGroupsAction implements Action {
   readonly type = GroupActionTypes.ADD_GROUPS;
 
-  constructor (public payload: Array<Group>) {}
+  constructor (public payload: Array<GroupState>) {}
 
 }
 
 export class AddGroupsSuccessAction implements Action {
   readonly type = GroupActionTypes.ADD_GROUPS_SUCCESS;
 
-  constructor (public payload: Array<Group>) {}
+  constructor (public payload: Array<GroupState>) {}
 }
 
 export class AddGroupsFailureAction implements Action {
   readonly type = GroupActionTypes.ADD_GROUPS_FAILURE;
 
-  constructor (public payload: Group) {}
+  constructor (public payload: GroupState) {}
 }
 
 export class LoadGroupsAction implements Action {
   readonly type = GroupActionTypes.LOAD_GROUPS;
 
-  constructor (public payload: Array<Group>) {}
+  constructor (public payload: Array<GroupState>) {}
 }
 
 export class LoadGroupsSuccessAction implements Action {
   readonly type = GroupActionTypes.LOAD_GROUPS_SUCCESS;
 
-  constructor (public payload: Array<Group>) {}
+  constructor (public payload: Array<GroupState>) {}
 }
 
 export class LoadGroupsFailureAction implements Action {
   readonly type = GroupActionTypes.LOAD_GROUPS_FAILURE;
 
-  constructor (public payload: Array<Group>) {}
+  constructor (public payload: Array<GroupState>) {}
 }
 
 export class RemoveGroupsAction implements Action {
   readonly type = GroupActionTypes.REMOVE_GROUPS;
 
-  constructor (public payload: Array<Group>) {}
+  constructor (public payload: Array<GroupState>) {}
 }
 
 export class RemoveGroupsSuccessAction implements Action {
   readonly type = GroupActionTypes.REMOVE_GROUPS_SUCCESS;
 
-  constructor (public payload: Array<Group>) {}
+  constructor (public payload: Array<GroupState>) {}
 }
 
 export class RemoveGroupsFailureAction implements Action {
   readonly type = GroupActionTypes.REMOVE_GROUPS_FAILURE;
 
-  constructor (public payload: Array<Group>) {}
+  constructor (public payload: Array<GroupState>) {}
 }
 
 

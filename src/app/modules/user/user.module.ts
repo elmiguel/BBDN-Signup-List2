@@ -8,6 +8,7 @@ import { UserService } from './user.service';
     CommonModule
   ],
   declarations: [UserComponent],
+  exports: [UserComponent],
   providers: [UserService]
 })
 export class UserModule { }

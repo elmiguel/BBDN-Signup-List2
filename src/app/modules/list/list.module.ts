@@ -8,6 +8,7 @@ import { ListService } from './list.service';
     CommonModule
   ],
   declarations: [ListComponent],
+  exports: [ListComponent],
   providers: [ListService]
 })
 export class ListModule { }
